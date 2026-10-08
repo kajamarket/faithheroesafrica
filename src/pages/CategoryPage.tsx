@@ -16,7 +16,7 @@ export const CategoryPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-bg text-text-primary pt-28 pb-16">
       <Seo
-        title={`${categoryName} Dispatches`}
+        title={`${categoryName} Stories`}
         description={`Read ministry articles and stories categorized under ${categoryName} on ${siteConfig.name}.`}
         path={`/category/${slug || ''}/`}
         type="website"
@@ -33,12 +33,12 @@ export const CategoryPage: React.FC = () => {
           <div className="flex items-center gap-2 mb-4">
             <span className="w-8 h-px bg-accent/60" />
             <span className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-              CATEGORY ARCHIVE
+              CATEGORY STORIES
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-heading tracking-tight mb-4">
-            <span className="font-display italic font-normal">{categoryName}</span> dispatches
+            <span className="font-display italic font-normal">{categoryName}</span> stories
           </h1>
 
           <p className="text-muted text-sm md:text-base max-w-xl font-light leading-relaxed">

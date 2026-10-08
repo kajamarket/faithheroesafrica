@@ -20,11 +20,11 @@ export const NotFoundPage: React.FC = () => {
         </span>
 
         <h1 className="text-5xl md:text-7xl font-display italic text-heading mb-6">
-          Dispatch not found
+          Story not found
         </h1>
 
         <p className="text-sm md:text-base text-muted font-light mb-10 leading-relaxed">
-          The archive record or URL you followed may have been updated, relocated, or temporarily unlisted.
+          The article or record you followed may have been updated, relocated, or temporarily unlisted.
         </p>
 
         <div className="flex flex-wrap items-center justify-center gap-4">

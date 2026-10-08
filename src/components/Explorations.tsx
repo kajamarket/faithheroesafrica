@@ -153,7 +153,7 @@ export const Explorations: React.FC = () => {
             <div className="flex items-center gap-2 mb-4">
               <span className="w-8 h-px bg-accent/60" />
               <span className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-                VISUAL ARCHIVE
+                HISTORICAL HERITAGE
               </span>
               <span className="w-8 h-px bg-accent/60" />
             </div>

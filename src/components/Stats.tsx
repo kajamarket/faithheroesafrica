@@ -39,7 +39,7 @@ export const Stats: React.FC = () => {
 
               <p className="text-xs md:text-sm text-muted font-light leading-relaxed">
                 {index === 0 && 'Spanning nations, tribes, and languages with documented testimonies of revival.'}
-                {index === 1 && 'Comprehensive historical records, biographies, and ministry dispatches.'}
+                {index === 1 && 'Comprehensive historical records, biographies, and ministry stories.'}
                 {index === 2 && 'Readers and leaders empowered globally through Christ-centered resources.'}
               </p>
 

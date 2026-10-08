@@ -46,12 +46,12 @@ export const BlogListPage: React.FC = () => {
           <div className="flex items-center gap-2 mb-4">
             <span className="w-8 h-px bg-accent/60" />
             <span className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-              CONTINENTAL ARCHIVE
+              OUR COLLECTION
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-light text-heading tracking-tight mb-4">
-            Archive <span className="font-display italic font-normal">dispatches</span>
+            Stories & <span className="font-display italic font-normal">articles</span>
           </h1>
 
           <p className="text-muted text-sm md:text-base max-w-xl font-light leading-relaxed">
@@ -83,7 +83,7 @@ export const BlogListPage: React.FC = () => {
         {/* Articles List using journal pill style */}
         <div className="flex flex-col gap-4 mb-16">
           {currentPosts.map((post, idx) => {
-            const categoryName = post.categories?.[0]?.name || 'Archive';
+            const categoryName = post.categories?.[0]?.name || 'General';
 
             return (
               <motion.article

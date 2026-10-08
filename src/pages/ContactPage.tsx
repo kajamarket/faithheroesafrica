@@ -37,10 +37,10 @@ export const ContactPage: React.FC = () => {
         {/* Descriptive Text (> 150 words) */}
         <div className="space-y-6 text-base md:text-lg text-text-primary/85 leading-relaxed font-light border-t border-stroke/60 pt-10 mb-12">
           <p>
-            Whether you represent a local church fellowship, an academic institution researching African religious history, or a family seeking to preserve the memoirs of a pioneer evangelist, our editorial desk is here to listen. We collaborate actively with Christian historians, archivists, and contributing writers across the continent.
+            Whether you represent a local church fellowship, an academic institution researching African religious history, or a family seeking to preserve the memoirs of a pioneer evangelist, our editorial desk is here to listen. We collaborate actively with Christian historians, researchers, and contributing writers across the continent.
           </p>
           <p>
-            Every dispatch published on {siteConfig.name} undergoes editorial review to ensure doctrinal balance, respectful representation, and historical precision. If you have corrections to an existing profile, recommendations for future research, or wish to propose an interview with a contemporary church leader, please reach out directly through our contact channels below.
+            Every article published on {siteConfig.name} undergoes editorial review to ensure doctrinal balance, respectful representation, and historical precision. If you have corrections to an existing profile, recommendations for future research, or wish to propose an interview with a contemporary church leader, please reach out directly through our contact channels below.
           </p>
           <p>
             We respond to inquiries within three to five business days. For urgent permissions or republishing rights, please clearly indicate your organization name and the specific article title in the subject line.
@@ -81,7 +81,7 @@ export const ContactPage: React.FC = () => {
                 Contributions
               </span>
               <h2 className="text-xl font-display italic text-heading mb-3">
-                Testimony Archive
+                Testimony Records
               </h2>
               <p className="text-xs text-muted mb-6 font-light leading-relaxed">
                 Do you have documented historical materials or firsthand testimonies of faith pioneers in your nation?
@@ -89,11 +89,11 @@ export const ContactPage: React.FC = () => {
             </div>
 
             <a
-              href={`mailto:${siteConfig.contactEmail}?subject=Testimony%20Submission%20Archive`}
+              href={`mailto:${siteConfig.contactEmail}?subject=Testimony%20Submission`}
               className="inline-flex items-center gap-2 text-sm text-heading hover:text-accent font-mono transition-colors group"
             >
               <span className="underline underline-offset-4 decoration-accent/60 group-hover:decoration-accent">
-                Submit Archival Record
+                Submit Historical Record
               </span>
               <span className="text-accent">↗</span>
             </a>

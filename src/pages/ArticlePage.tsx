@@ -22,13 +22,13 @@ export const ArticlePage: React.FC = () => {
           Article Not Found
         </h1>
         <p className="text-muted text-sm mb-8 font-light">
-          The article you are looking for has been moved or archived.
+          The article you are looking for has been moved or relocated.
         </p>
         <Link
           to="/blog/"
           className="px-6 py-3 rounded-full bg-surface border border-stroke text-xs text-heading font-medium hover:bg-stroke transition-colors focus-visible:ring-2 focus-visible:ring-accent"
         >
-          Return to Articles Archive
+          Return to All Articles
         </Link>
       </div>
     );
@@ -194,7 +194,7 @@ export const ArticlePage: React.FC = () => {
             <div className="flex items-center gap-3 mb-8">
               <span className="w-8 h-px bg-accent/60" />
               <h2 className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-                RELATED DISPATCHES
+                RELATED STORIES
               </h2>
             </div>
 

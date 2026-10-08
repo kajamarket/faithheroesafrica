@@ -42,7 +42,7 @@ export const ArchiveTicker: React.FC = () => {
     <div
       className="relative w-full overflow-hidden whitespace-nowrap py-4 sm:py-5 border-y border-stroke/50 bg-surface/30 select-none"
       role="region"
-      aria-label="Archive topics ticker"
+      aria-label="Topics ticker"
     >
       <div ref={marqueeRef} className="inline-flex will-change-transform items-center">
         <span className="font-mono text-xs sm:text-sm tracking-[0.25em] font-semibold text-forest dark:text-[#E2C27F] uppercase px-4">

@@ -90,7 +90,7 @@ export const AboutPage: React.FC = () => {
               to="/blog/"
               className="px-6 py-3 rounded-full bg-accent text-white hover:bg-accent-light hover:text-black font-medium text-xs font-mono uppercase tracking-wider transition-colors shadow-sm focus-visible:ring-2 focus-visible:ring-accent"
             >
-              Explore Archive Dispatches →
+              Explore Our Stories →
             </Link>
             <Link
               to="/contact/"

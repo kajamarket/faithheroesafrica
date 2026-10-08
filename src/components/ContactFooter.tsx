@@ -129,7 +129,7 @@ export const ContactFooter: React.FC = () => {
         <div className="flex items-center gap-2 mb-4">
           <span className="w-8 h-px bg-accent/60" />
           <span className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-            CONNECT WITH THE ARCHIVE
+            CONNECT WITH OUR MISSION
           </span>
           <span className="w-8 h-px bg-accent/60" />
         </div>
@@ -139,7 +139,7 @@ export const ContactFooter: React.FC = () => {
         </h2>
 
         <p className="text-sm md:text-base text-muted max-w-md mb-8 font-light leading-relaxed">
-          Have an archive submission, historical record, or testimony to share? Reach out to our editorial desk.
+          Have a story submission, historical record, or testimony to share? Reach out to our editorial desk.
         </p>
 
         {/* Email CTA button */}
@@ -189,7 +189,7 @@ export const ContactFooter: React.FC = () => {
             <ul className="space-y-2.5">
               <li>
                 <Link to="/about/" className="text-muted hover:text-heading transition-colors">
-                  About Archive
+                  About Us
                 </Link>
               </li>
               <li>

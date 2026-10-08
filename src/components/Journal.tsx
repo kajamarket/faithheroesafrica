@@ -34,13 +34,13 @@ export const Journal: React.FC<JournalProps> = ({ posts }) => {
             <div className="flex items-center gap-2 mb-4">
               <span className="w-8 h-px bg-accent/60" />
               <span className="text-xs text-muted uppercase tracking-[0.25em] font-medium font-mono">
-                DISPATCHES & WRITINGS
+                STORIES & WRITINGS
               </span>
             </div>
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display italic text-heading tracking-tight leading-[1.15]">
-              Recent dispatches
+              Recent stories
             </h2>
 
             {/* Subtext */}
@@ -55,7 +55,7 @@ export const Journal: React.FC<JournalProps> = ({ posts }) => {
               to="/blog/"
               className="group inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stroke bg-surface/60 text-xs font-medium text-heading hover:border-accent hover:text-accent transition-colors focus-visible:ring-2 focus-visible:ring-accent"
             >
-              <span>View all dispatches</span>
+              <span>View all stories</span>
               <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
             </Link>
           </div>
@@ -110,7 +110,7 @@ export const Journal: React.FC<JournalProps> = ({ posts }) => {
 
                   {/* Right: Read CTA arrow */}
                   <div className="hidden sm:flex items-center gap-2 pr-4 shrink-0 text-xs font-mono uppercase tracking-wider text-muted group-hover:text-heading transition-colors">
-                    <span>Read dispatch</span>
+                    <span>Read story</span>
                     <span className="text-accent text-sm transition-transform duration-300 group-hover:translate-x-1">
                       →
                     </span>

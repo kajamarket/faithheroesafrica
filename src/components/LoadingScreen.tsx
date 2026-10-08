@@ -85,7 +85,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           className="text-xs text-muted/60 uppercase tracking-[0.2em] hidden sm:block"
         >
-          Continental Archive · 2026
+          Continental Heritage · 2026
         </motion.div>
       </div>
 
