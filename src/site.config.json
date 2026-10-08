@@ -1,0 +1,132 @@
+{
+  "name": "Faith Heroes Africa",
+  "domain": "faithheroesafrica.org",
+  "slug": "faithheroes",
+  "wpApiUrl": "https://thetopachievers.org/wp-json/wp/v2",
+  "tagline": "Celebrating Courageous Faith Across the African Continent",
+  "description": "Chronicling stories, testimonies, and timeless legacies of faith heroes transforming nations across Africa.",
+  "heroEyebrow": "FAITH HEROES AFRICA",
+  "heroTitle": "Documenting The Moves of God in Africa",
+  "heroVideoUrl": "https://assets.mixkit.co/videos/41401/41401-720.mp4",
+  "heroDescription": "Discover inspiring stories, meaningful interviews and the people carrying the Gospel across Africa and beyond.",
+  "heroMicrocopy": "Stories · Heritage · Missions · Revival",
+  "heroRoles": ["Visionary", "Evangelist", "Reformer", "Pioneer"],
+  "heroSentence": "A {role} rises across Africa.",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Articles", "href": "/blog/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "social": [
+    { "label": "Twitter", "href": "https://twitter.com" },
+    { "label": "Facebook", "href": "https://facebook.com" },
+    { "label": "YouTube", "href": "https://youtube.com" }
+  ],
+  "contactEmail": "editor@faithheroesafrica.org",
+  "defaultOgImage": "/og-default.jpg",
+  "stats": [
+    { "value": "54", "label": "Nations Reached" },
+    { "value": "100+", "label": "Documented Legacies" },
+    { "value": "1M+", "label": "Lives Inspired" }
+  ],
+  "mission": {
+    "label": "THE MISSION",
+    "heading": "Preserving stories. Celebrating faith. Inspiring generations.",
+    "paragraphs": [
+      "Faith Heroes Africa exists to document the people, movements and moments that have shaped the Christian story across Africa.",
+      "From missionaries and ministers to revival movements, historic churches and emerging voices, we preserve stories that deserve to be remembered and shared with generations to come.",
+      "Our collection brings together the history, heritage and continuing movement of the Christian faith across the continent."
+    ],
+    "ctaText": "Discover Our Story →",
+    "ctaHref": "/about/"
+  },
+  "editorialStatement": {
+    "statement": "Some stories should not be forgotten.",
+    "subtext": "The people. The sacrifices. The movements. The legacy."
+  },
+  "categoriesSection": {
+    "label": "EXPLORE THE COLLECTION",
+    "heading": "Stories from across the African Christian experience.",
+    "intro": "Explore stories of missions, revival, leadership, heritage and the people whose faith continues to influence generations.",
+    "promptDesktop": "EXPLORE A CATEGORY →",
+    "promptMobile": "Swipe to explore →"
+  },
+  "categoryDescriptions": {
+    "missions": "Stories of missionaries, ministries and movements carrying the Gospel across Africa.",
+    "african-ministers-in-diaspora": "Exploring the lives and ministries of African Christian leaders making an impact beyond the continent.",
+    "heritage": "Preserving the history, traditions and foundations of Christianity in Africa.",
+    "those-africa-can-never-forget": "Remembering the people whose faith, sacrifice and service left an enduring mark on Africa.",
+    "interviews": "Conversations with Christian leaders, ministers, authors and influential voices.",
+    "revival": "Stories, materials and resources for understanding revival and spiritual awakening.",
+    "uncategorized": "Stories from across the African Christian community, past and present."
+  },
+  "tickerWords": [
+    "MISSIONS",
+    "HERITAGE",
+    "REVIVAL",
+    "INTERVIEWS",
+    "AFRICAN CHRISTIAN HISTORY",
+    "LEADERSHIP",
+    "STORIES"
+  ],
+  "featuredArchive": {
+    "label": "STORIES WORTH REMEMBERING",
+    "heading": "Stories worth remembering.",
+    "intro": "Discover stories of faith, leadership, history and transformation from the Faith Heroes Africa collection."
+  },
+  "founder": {
+    "label": "THE VOICE BEHIND THE STORY",
+    "name": "Emmanuel Olu Falodun",
+    "title": "Meet Emmanuel Olu Falodun",
+    "paragraphs": [
+      "Emmanuel Olu Falodun is an author and pastor whose work is connected to documenting and communicating the story of faith in Africa.",
+      "Through Faith Heroes Africa and related platforms, the vision is to preserve important stories, honour Christian leaders and encourage future generations."
+    ],
+    "photo": "/founder.jpg",
+    "quote": "",
+    "stripText": "Books & Resources by the Founder",
+    "booksUrl": "https://www.amazon.com/stores/author/B00AYLJTSY"
+  },
+  "network": [
+    {
+      "name": "The Top Achievers Network",
+      "description": "Inspiring, equipping, and raising a new generation of leaders through impactful resources and mentorship.",
+      "href": "https://thetopachievers.org/",
+      "cta": "Visit →"
+    },
+    {
+      "name": "Online Radio",
+      "description": "Broadcasting inspiring Christian messages, worship, and leadership teaching across the globe.",
+      "href": "https://radio.thetopachievers.org/",
+      "cta": "Listen →"
+    },
+    {
+      "name": "Million Plus Intercessors",
+      "description": "Mobilizing a global community of prayer warriors interceding for revival and continental transformation.",
+      "href": "https://millionplusintercessors.org",
+      "cta": "Visit →"
+    },
+    {
+      "name": "Christ Salvation",
+      "description": "Sharing the uncompromised Gospel of Jesus Christ and discipling believers into spiritual maturity.",
+      "href": "https://christsalvation.org",
+      "cta": "Visit →"
+    },
+    {
+      "name": "Power For Exploits",
+      "description": "Empowering believers with spiritual insight, biblical leadership principles, and ministry resources.",
+      "href": "https://powerforexploits.org",
+      "cta": "Visit →"
+    },
+    {
+      "name": "Napfan",
+      "description": "Fostering collaboration, fellowship, and strategic alliances across Christian ministries in Africa.",
+      "href": "https://napfan.org",
+      "cta": "Visit →"
+    }
+  ],
+  "newsletter": {
+    "formAction": ""
+  }
+}

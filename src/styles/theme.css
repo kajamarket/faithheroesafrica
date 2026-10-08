@@ -1,0 +1,83 @@
+/* Theme CSS Variables: HSL channels */
+:root,
+:root[data-theme="dark"] {
+  /* Dark Theme (Default) */
+  --bg: 165 24% 7%;            /* Dark background #0D1513 */
+  --surface: 165 40% 11%;      /* Deep Forest surface */
+  --text: 43 38% 94%;          /* Warm light #F5F1E8 */
+  --heading: 43 38% 94%;       /* Warm light */
+  --forest: 165 46% 17%;       /* Deep forest green #173F35 */
+  --forest-surface: 165 46% 14%;
+  --muted: 153 12% 62%;        /* Warm muted sage/ivory */
+  --stroke: 166 35% 18%;       /* Dark subtle border */
+  --accent: 38 54% 54%;        /* Heritage Gold #C99A4B */
+  --accent-light: 40 60% 69%;  /* Warm gold highlight #E2C27F */
+  --accent-glow: 38 54% 54% / 0.35;
+}
+
+:root[data-theme="light"] {
+  /* Light Theme (Alternative) */
+  --bg: 44 41% 95%;           /* Ivory #F7F4EC */
+  --surface: 120 17% 93%;      /* Soft Sage #E9EFE9 */
+  --text: 144 7% 14%;          /* Charcoal #202522 */
+  --heading: 165 46% 17%;      /* Forest #173F35 */
+  --forest: 165 46% 17%;       /* Forest #173F35 */
+  --forest-surface: 165 46% 14%;
+  --muted: 150 6% 40%;         /* Muted text */
+  --stroke: 120 10% 84%;       /* Subtle sage border */
+  --accent: 38 54% 54%;        /* Heritage Gold #C99A4B */
+  --accent-light: 40 60% 69%;  /* Warm gold highlight #E2C27F */
+  --accent-glow: 38 54% 54% / 0.25;
+}
+
+/* Base transitions between light and dark modes */
+html,
+body,
+header,
+nav,
+main,
+section,
+footer,
+article {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Subtle darkening of images in dark mode */
+:root:not([data-theme="light"]) img,
+:root[data-theme="dark"] img {
+  filter: brightness(0.94) contrast(1.02);
+}
+
+/* Accent Gradients: Heritage Gold */
+.accent-gradient {
+  background: linear-gradient(90deg, #C99A4B 0%, #E2C27F 100%);
+}
+
+.accent-gradient-rev {
+  background: linear-gradient(270deg, #C99A4B 0%, #E2C27F 100%);
+}
+
+.accent-border-wrap {
+  position: relative;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #C99A4B 0%, #E2C27F 100%);
+  background-size: 200% 200%;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--accent));
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
