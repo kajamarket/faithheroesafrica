@@ -53,6 +53,8 @@ export const Seo: React.FC<SeoProps> = ({
       <title>{meta.title}</title>
       <meta name="description" content={meta.description} />
       <link rel="canonical" href={meta.canonical} />
+      <link rel="icon" type="image/png" href="/faithheroes_original_logo_center-removebg-preview.png" />
+      <link rel="apple-touch-icon" href="/faithheroes_original_logo_center-removebg-preview.png" />
 
       {/* Open Graph */}
       <meta property="og:site_name" content={siteConfig.name} />

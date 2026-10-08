@@ -66,6 +66,41 @@ function hashUrl(url) {
   }
 }
 
+const REQUEST_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 FaithHeroes/1.0',
+  'Accept': 'application/json, text/plain, */*',
+  'Accept-Language': 'en-US,en;q=0.9',
+};
+
+function tryFallbackToCachedPosts(reason) {
+  const postsJsonPath = path.join(generatedDir, 'posts.json');
+  if (fs.existsSync(postsJsonPath)) {
+    try {
+      const cached = JSON.parse(fs.readFileSync(postsJsonPath, 'utf-8'));
+      if (Array.isArray(cached) && cached.length > 0) {
+        console.warn(`[fetch-content] ${reason}. Successfully falling back to cached posts (${cached.length} articles).`);
+        const allCatSlugs = Array.from(
+          new Set(
+            cached.flatMap((p) => (p.categories || []).map((c) => c.slug)).filter(Boolean)
+          )
+        );
+        writeOutputs(cached, allCatSlugs);
+        return true;
+      }
+    } catch (e) {
+      console.warn(`[fetch-content] Could not parse cached posts:`, e.message);
+    }
+  }
+
+  if (process.env.ALLOW_EMPTY === '1') {
+    console.warn(`[fetch-content] ${reason}. ALLOW_EMPTY=1 set. Writing empty posts fallback.`);
+    writeOutputs([], []);
+    return true;
+  }
+
+  return false;
+}
+
 async function downloadMedia(url) {
   if (!url || typeof url !== 'string' || !url.startsWith('http')) return null;
   const filename = hashUrl(url);
@@ -76,7 +111,10 @@ async function downloadMedia(url) {
   }
 
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      headers: { 'User-Agent': REQUEST_HEADERS['User-Agent'] },
+      signal: AbortSignal.timeout(15000),
+    });
     if (!res.ok) {
       console.warn(`[fetch-content] Warning: failed to download image ${url} (${res.status})`);
       return null;
@@ -97,12 +135,13 @@ async function run() {
 
   let termRes;
   try {
-    termRes = await fetch(termUrl);
+    termRes = await fetch(termUrl, {
+      headers: REQUEST_HEADERS,
+      signal: AbortSignal.timeout(15000),
+    });
   } catch (err) {
-    console.error(`[fetch-content] Error connecting to WP API:`, err);
-    if (process.env.ALLOW_EMPTY === '1') {
-      console.warn('[fetch-content] ALLOW_EMPTY=1 set. Writing empty posts fallback.');
-      writeOutputs([], []);
+    console.error(`[fetch-content] Error connecting to WP API:`, err.message);
+    if (tryFallbackToCachedPosts(`Connection error: ${err.message}`)) {
       return;
     }
     process.exit(1);
@@ -110,18 +149,25 @@ async function run() {
 
   if (!termRes.ok) {
     console.error(`[fetch-content] Term request failed with status: ${termRes.status}`);
-    if (process.env.ALLOW_EMPTY === '1') {
-      writeOutputs([], []);
+    if (tryFallbackToCachedPosts(`Term request status: ${termRes.status}`)) {
       return;
     }
     process.exit(1);
   }
 
-  const terms = await termRes.json();
+  let terms;
+  try {
+    terms = await termRes.json();
+  } catch (err) {
+    if (tryFallbackToCachedPosts(`Invalid JSON from term endpoint: ${err.message}`)) {
+      return;
+    }
+    process.exit(1);
+  }
+
   if (!Array.isArray(terms) || terms.length === 0) {
     console.error(`[fetch-content] ERROR: No distribution_site term found for slug "${slug}"`);
-    if (process.env.ALLOW_EMPTY === '1') {
-      writeOutputs([], []);
+    if (tryFallbackToCachedPosts(`No distribution_site term found for slug "${slug}"`)) {
       return;
     }
     process.exit(1);
@@ -139,9 +185,25 @@ async function run() {
     const postsUrl = `${wpApiUrl}/posts?distribution_site=${termId}&_embed&per_page=100&page=${page}`;
     console.log(`[fetch-content] Fetching posts page ${page}: ${postsUrl}`);
 
-    const res = await fetch(postsUrl);
+    let res;
+    try {
+      res = await fetch(postsUrl, {
+        headers: REQUEST_HEADERS,
+        signal: AbortSignal.timeout(15000),
+      });
+    } catch (err) {
+      console.error(`[fetch-content] Network error fetching posts page ${page}:`, err.message);
+      if (tryFallbackToCachedPosts(`Network error on posts page ${page}`)) {
+        return;
+      }
+      process.exit(1);
+    }
+
     if (!res.ok) {
       console.error(`[fetch-content] Failed fetching posts page ${page}: ${res.status}`);
+      if (tryFallbackToCachedPosts(`HTTP error ${res.status} on posts page ${page}`)) {
+        return;
+      }
       process.exit(1);
     }
 
@@ -150,7 +212,16 @@ async function run() {
       totalPages = parseInt(headerTotalPages, 10) || 1;
     }
 
-    const data = await res.json();
+    let data;
+    try {
+      data = await res.json();
+    } catch (err) {
+      if (tryFallbackToCachedPosts(`Failed parsing JSON on page ${page}`)) {
+        return;
+      }
+      process.exit(1);
+    }
+
     if (Array.isArray(data)) {
       rawPosts.push(...data);
     }
@@ -160,7 +231,10 @@ async function run() {
 
   console.log(`[fetch-content] Total raw posts fetched: ${rawPosts.length}`);
 
-  if (rawPosts.length === 0 && process.env.ALLOW_EMPTY !== '1') {
+  if (rawPosts.length === 0) {
+    if (tryFallbackToCachedPosts('0 raw posts returned by API')) {
+      return;
+    }
     console.error(`[fetch-content] ERROR: 0 posts found for distribution_site ${slug}. Aborting build.`);
     process.exit(1);
   }

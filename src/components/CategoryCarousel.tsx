@@ -5,185 +5,164 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { siteConfig } from '../site.config';
 import { BlogPost } from '../types/blog';
 
-// 1. Missions in Africa — Line-drawn compass star with radiating pathways
+// 1. Missions in Africa — Compass & radiating pathways
 const MissionsIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    <circle cx="24" cy="24" r="20" stroke="currentColor" strokeWidth="1.25" strokeDasharray="3 3" opacity="0.6" />
-    <circle cx="24" cy="24" r="14" stroke="currentColor" strokeWidth="1.2" opacity="0.4" />
+    <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="1.2" strokeDasharray="2.5 2.5" opacity="0.5" />
+    <circle cx="16" cy="16" r="9" stroke="currentColor" strokeWidth="1.1" opacity="0.4" />
     <path
-      d="M24 6L27 21L42 24L27 27L24 42L21 27L6 24L21 21L24 6Z"
+      d="M16 4L18 14L28 16L18 18L16 28L14 18L4 16L14 14L16 4Z"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="1.3"
       strokeLinejoin="round"
     />
-    <circle cx="24" cy="24" r="3" fill="#C99A4B" />
-    <path d="M24 18V30M18 24H30" stroke="#C99A4B" strokeWidth="1.25" strokeLinecap="round" />
+    <circle cx="16" cy="16" r="2.2" fill="#C99A4B" />
   </svg>
 );
 
-// 2. African Ministers in Diaspora — Transatlantic arcs and soaring herald dove
+// 2. African Ministers in Diaspora — Transatlantic arc & soaring herald
 const DiasporaIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    <circle cx="24" cy="24" r="19" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
-    <ellipse cx="24" cy="24" rx="10" ry="19" stroke="currentColor" strokeWidth="1.2" opacity="0.6" />
-    <line x1="5" y1="24" x2="43" y2="24" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+    <circle cx="16" cy="16" r="13" stroke="currentColor" strokeWidth="1.2" opacity="0.4" />
+    <ellipse cx="16" cy="16" rx="6.5" ry="13" stroke="currentColor" strokeWidth="1.1" opacity="0.5" />
+    <line x1="3" y1="16" x2="29" y2="16" stroke="currentColor" strokeWidth="1.1" opacity="0.4" />
     <path
-      d="M14 26C18 21 24 16 34 14C32 20 28 26 22 28C18 29.5 15 28 14 26Z"
+      d="M10 18C13 14 17 11 24 10C22.5 14 20 18 16 19.5C13 20.5 11 19.5 10 18Z"
       stroke="#C99A4B"
-      strokeWidth="1.5"
+      strokeWidth="1.3"
       strokeLinejoin="round"
       fill="#C99A4B"
       fillOpacity="0.18"
     />
-    <path
-      d="M22 20C25 15 31 11 36 10C34 14 31 17 28 19"
-      stroke="#C99A4B"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-    />
-    <circle cx="34" cy="14" r="2" fill="#C99A4B" />
+    <circle cx="24" cy="10" r="1.5" fill="#C99A4B" />
   </svg>
 );
 
 // 3. Heritage of the African Faith — Lalibela rock-hewn cruciform & historic foundation
 const HeritageIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    <rect x="20" y="8" width="8" height="32" rx="1" stroke="currentColor" strokeWidth="1.5" />
-    <rect x="10" y="18" width="28" height="8" rx="1" stroke="currentColor" strokeWidth="1.5" />
-    <path
-      d="M24 11V15M24 33V37M13 22H17M31 22H35"
-      stroke="#C99A4B"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-    />
-    <circle cx="24" cy="22" r="2.5" fill="#C99A4B" />
-    <path d="M8 42H40" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <path d="M12 40H36" stroke="#C99A4B" strokeWidth="1.2" strokeLinecap="round" />
+    <rect x="13.5" y="5" width="5" height="22" rx="0.8" stroke="currentColor" strokeWidth="1.3" />
+    <rect x="6.5" y="11.5" width="19" height="5" rx="0.8" stroke="currentColor" strokeWidth="1.3" />
+    <path d="M16 7V10M16 22V25M8.5 14H11.5M20.5 14H23.5" stroke="#C99A4B" strokeWidth="1.3" strokeLinecap="round" />
+    <circle cx="16" cy="14" r="1.6" fill="#C99A4B" />
+    <path d="M5 28H27" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" />
   </svg>
 );
 
-// 4. Those Africa Can Never Forget — Eternal flame of remembrance & memorial pedestal
+// 4. Those Africa Can Never Forget — Memorial eternal flame & pedestal
 const RemembranceIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
     <path
-      d="M24 7C25.5 12 29 16 31 21C33.5 27 30 34 24 36C18 34 14.5 27 17 21C19 16 22.5 12 24 7Z"
+      d="M16 4.5C17.2 8 19.8 11 21.2 14.5C23 18.5 20.5 23.5 16 25C11.5 23.5 9 18.5 10.8 14.5C12.2 11 14.8 8 16 4.5Z"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="1.3"
       strokeLinejoin="round"
     />
     <path
-      d="M24 16C25 19 27 22 27 25C27 28.5 25.5 31 24 32C22.5 31 21 28.5 21 25C21 22 23 19 24 16Z"
+      d="M16 11.5C16.8 13.5 18 15.5 18 17.5C18 20 17 21.5 16 22.2C15 21.5 14 20 14 17.5C14 15.5 15.2 13.5 16 11.5Z"
       fill="#C99A4B"
       stroke="#C99A4B"
-      strokeWidth="1.2"
+      strokeWidth="1"
     />
-    <path d="M16 38H32M19 41H29" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    <circle cx="12" cy="18" r="1.5" fill="#C99A4B" />
-    <circle cx="36" cy="18" r="1.5" fill="#C99A4B" />
+    <path d="M10 26.5H22M12 28.5H20" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
   </svg>
 );
 
 // 5. Interviews — Dialogue scrolls & recording quill
 const InterviewsIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    <rect x="8" y="10" width="22" height="26" rx="3" stroke="currentColor" strokeWidth="1.4" />
-    <path d="M13 17H23M13 22H23M13 27H19" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
+    <rect x="5.5" y="7" width="15" height="18" rx="2" stroke="currentColor" strokeWidth="1.3" />
+    <path d="M9 11.5H16M9 15H16M9 18.5H13" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
     <path
-      d="M38 10C35 15 32 24 24 36L21 37L22 34C28 28 34 18 38 10Z"
+      d="M26.5 6.5C24.5 10 22 16.5 16.5 24.5L14.5 25.5L15 23C19.5 18.5 23.5 12 26.5 6.5Z"
       stroke="#C99A4B"
-      strokeWidth="1.5"
+      strokeWidth="1.3"
       strokeLinejoin="round"
       fill="#C99A4B"
       fillOpacity="0.2"
     />
-    <path d="M33 16C30 19 28 23 26 27" stroke="#C99A4B" strokeWidth="1.2" strokeLinecap="round" />
-    <path d="M31 38C34 38 37 36 39 34" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.7" />
-    <path d="M30 42C35 42 40 39 42 35" stroke="#C99A4B" strokeWidth="1.2" strokeLinecap="round" />
   </svg>
 );
 
 // 6. Revival Resources — Awakening dawn rays and fire above open scriptures
 const RevivalIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
     <path
-      d="M10 32C15 30 20 31 24 34C28 31 33 30 38 32V16C33 14 28 15 24 18C20 15 15 14 10 16V32Z"
+      d="M7 22C10.5 20.5 14 21.2 16 23C18 21.2 21.5 20.5 25 22V11C21.5 9.5 18 10.2 16 12C14 10.2 10.5 9.5 7 11V22Z"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.3"
       strokeLinejoin="round"
     />
-    <line x1="24" y1="18" x2="24" y2="34" stroke="currentColor" strokeWidth="1.4" />
+    <line x1="16" y1="12" x2="16" y2="23" stroke="currentColor" strokeWidth="1.2" />
     <path
-      d="M24 6C25.5 9 27.5 11 27.5 13C27.5 15 26 16.5 24 16.5C22 16.5 20.5 15 20.5 13C20.5 11 22.5 9 24 6Z"
+      d="M16 4C17.2 6.2 18.5 7.8 18.5 9.2C18.5 10.8 17.4 11.8 16 11.8C14.6 11.8 13.5 10.8 13.5 9.2C13.5 7.8 14.8 6.2 16 4Z"
       fill="#C99A4B"
       stroke="#C99A4B"
-      strokeWidth="1.2"
+      strokeWidth="1"
     />
-    <line x1="24" y1="3" x2="24" y2="5" stroke="#C99A4B" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="16" y1="6" x2="18" y2="8" stroke="#C99A4B" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="32" y1="6" x2="30" y2="8" stroke="#C99A4B" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="11" y1="11" x2="13" y2="12" stroke="#C99A4B" strokeWidth="1.5" strokeLinecap="round" />
-    <line x1="37" y1="11" x2="35" y2="12" stroke="#C99A4B" strokeWidth="1.5" strokeLinecap="round" />
+    <line x1="16" y1="2" x2="16" y2="3.2" stroke="#C99A4B" strokeWidth="1.3" strokeLinecap="round" />
+    <line x1="10.5" y1="4.5" x2="11.8" y2="5.8" stroke="#C99A4B" strokeWidth="1.3" strokeLinecap="round" />
+    <line x1="21.5" y1="4.5" x2="20.2" y2="5.8" stroke="#C99A4B" strokeWidth="1.3" strokeLinecap="round" />
   </svg>
 );
 
 // 7. General Stories — Open chronicle volume with silk bookmark ribbon
 const GeneralStoriesIcon: React.FC<{ className?: string }> = ({ className = '' }) => (
   <svg
-    viewBox="0 0 48 48"
+    viewBox="0 0 32 32"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className={className}
     aria-hidden="true"
   >
-    <rect x="11" y="9" width="26" height="32" rx="2" stroke="currentColor" strokeWidth="1.5" />
-    <line x1="16" y1="9" x2="16" y2="41" stroke="currentColor" strokeWidth="1.2" />
-    <line x1="20" y1="16" x2="31" y2="16" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
-    <line x1="20" y1="21" x2="31" y2="21" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
-    <line x1="20" y1="26" x2="27" y2="26" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" opacity="0.6" />
+    <rect x="7.5" y="6" width="17" height="21" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
+    <line x1="11" y1="6" x2="11" y2="27" stroke="currentColor" strokeWidth="1.1" />
+    <line x1="14" y1="11" x2="21" y2="11" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
+    <line x1="14" y1="14.5" x2="21" y2="14.5" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
+    <line x1="14" y1="18" x2="19" y2="18" stroke="currentColor" strokeWidth="1" strokeLinecap="round" opacity="0.6" />
     <path
-      d="M26 9V29L29 26L32 29V9"
+      d="M18 6V19L20 17L22 19V6"
       fill="#C99A4B"
       stroke="#C99A4B"
-      strokeWidth="1.2"
+      strokeWidth="1"
       strokeLinejoin="round"
     />
-    <circle cx="26" cy="34" r="2.5" fill="#C99A4B" />
   </svg>
 );
 
@@ -248,7 +227,7 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
   const [canAutoAdvance, setCanAutoAdvance] = useState<boolean>(true);
   const config = siteConfig.categoriesSection;
 
-  // Stop auto-advance permanently upon any user interaction
+  // Stop auto-advance permanently upon user interaction
   const stopAutoAdvance = () => {
     setCanAutoAdvance(false);
   };
@@ -273,9 +252,9 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
       if (container.scrollLeft >= maxScroll - 10) {
         container.scrollTo({ left: 0, behavior: 'smooth' });
       } else {
-        container.scrollBy({ left: 360, behavior: 'smooth' });
+        container.scrollBy({ left: 460, behavior: 'smooth' });
       }
-    }, 4500);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [canAutoAdvance]);
@@ -283,14 +262,14 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
   const handleScrollLeft = () => {
     stopAutoAdvance();
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -360, behavior: 'smooth' });
+      containerRef.current.scrollBy({ left: -460, behavior: 'smooth' });
     }
   };
 
   const handleScrollRight = () => {
     stopAutoAdvance();
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 360, behavior: 'smooth' });
+      containerRef.current.scrollBy({ left: 460, behavior: 'smooth' });
     }
   };
 
@@ -303,7 +282,7 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
       id="category-collections"
       className="relative bg-bg py-20 md:py-28 border-t border-stroke/50"
     >
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16 mb-10 md:mb-14">
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10 lg:px-16 mb-10 md:mb-12">
         {/* Editorial Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-2xl">
@@ -325,7 +304,7 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
             )}
           </div>
 
-          {/* Controls & Prompt Label (Navigation Scroll Buttons) */}
+          {/* Controls & Prompt Label (Navigation Scroll Buttons retained, desktop scrollbar hidden) */}
           <div className="flex items-center gap-4 self-start md:self-end">
             <span className="text-xs font-mono uppercase tracking-wider text-muted hidden sm:inline-block">
               {config.promptDesktop || 'EXPLORE A CATEGORY →'}
@@ -356,15 +335,15 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
         </div>
       </div>
 
-      {/* Snap Carousel: Horizontal swipe on mobile, invisible scrollbar on desktop */}
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 lg:px-16">
+      {/* Snap Carousel: Horizontal Card Layout [Icon / visual] [Category information] [Arrow / interaction] */}
+      <div className="max-w-[1240px] mx-auto px-6 md:px-10 lg:px-16">
         <div
           ref={containerRef}
           onMouseEnter={stopAutoAdvance}
           onTouchStart={stopAutoAdvance}
           onFocus={stopAutoAdvance}
           onScroll={stopAutoAdvance}
-          className="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-8 pt-2 select-none focus:outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-5 md:gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-6 pt-2 select-none focus:outline-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           tabIndex={0}
           aria-label="Categories collection carousel"
         >
@@ -374,51 +353,45 @@ export const CategoryCarousel: React.FC<CategoryCarouselProps> = () => {
             return (
               <motion.div
                 key={cat.slug}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.06 }}
-                className="snap-start shrink-0 w-[290px] sm:w-[330px] md:w-[360px]"
+                transition={{ duration: 0.45, delay: idx * 0.05 }}
+                className="snap-start shrink-0 w-[310px] sm:w-[420px] md:w-[460px] lg:w-[480px]"
               >
                 <Link
                   to={`/category/${cat.slug}/`}
-                  className="group flex flex-col justify-between h-full min-h-[380px] p-8 sm:p-9 rounded-[28px] bg-[#FAF8F5] text-[#173F35] border border-[#E7DFD2] shadow-sm transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-[#C99A4B]/60"
+                  className="group relative flex flex-row items-center justify-between h-full min-h-[140px] sm:min-h-[150px] p-5 sm:p-6 md:p-7 rounded-2xl sm:rounded-3xl bg-[#FAF8F5] text-[#173F35] border border-[#E7DFD2] shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:border-[#C99A4B]/70"
                 >
-                  {/* Card Header & Content */}
-                  <div>
-                    {/* Top Row: Symbolic visual + Gold accent indicator */}
-                    <div className="flex items-center justify-between mb-7">
-                      <div className="w-14 h-14 rounded-2xl bg-[#EFE9DD]/80 border border-[#DDD4C3] flex items-center justify-center text-[#173F35] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#EAE2D2] group-hover:border-[#C99A4B]/60 group-hover:text-[#0D2620]">
-                        <Icon className="w-8 h-8 transition-transform duration-300 group-hover:scale-105 group-hover:rotate-1" />
-                      </div>
+                  {/* LEFT: Symbolic Icon / Visual Container */}
+                  <div className="shrink-0 mr-4 sm:mr-5">
+                    <div className="w-13 h-13 sm:w-15 sm:h-15 w-[52px] h-[52px] sm:w-[60px] sm:h-[60px] rounded-xl sm:rounded-2xl bg-[#EFE9DD]/85 border border-[#DDD4C3] flex items-center justify-center text-[#173F35] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#EAE2D2] group-hover:border-[#C99A4B]/60 group-hover:text-[#0D2620] shadow-xs">
+                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-2" />
+                    </div>
+                  </div>
 
-                      <span className="text-[10px] font-mono uppercase tracking-[0.22em] text-[#C99A4B] font-semibold opacity-90 group-hover:opacity-100 transition-opacity">
+                  {/* CENTER: Category Information (Title & Short Description) */}
+                  <div className="flex-1 min-w-0 pr-3 sm:pr-4">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="w-3.5 h-[1.5px] bg-[#C99A4B]/70 transition-all duration-300 group-hover:w-6 group-hover:bg-[#C99A4B]" />
+                      <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-[#C99A4B] font-semibold">
                         COLLECTION
                       </span>
                     </div>
 
-                    {/* Category Title: Deep green editorial serif */}
-                    <h3 className="text-xl sm:text-2xl font-display italic text-[#173F35] tracking-tight leading-[1.2] mb-3 group-hover:text-[#0D241E] transition-colors">
+                    <h3 className="text-lg sm:text-xl md:text-[22px] font-display italic text-[#173F35] tracking-tight leading-[1.2] mb-1.5 group-hover:text-[#0D241E] transition-colors truncate">
                       {cat.title}
                     </h3>
 
-                    {/* Gold Accent Divider Bar */}
-                    <div className="w-8 h-[2px] bg-[#C99A4B]/60 my-4 transition-all duration-300 group-hover:w-14 group-hover:bg-[#C99A4B]" />
-
-                    {/* Editorial Short Description */}
-                    <p className="text-xs sm:text-[13.5px] text-[#223530]/85 font-light leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-[#223530]/80 font-light leading-snug line-clamp-2">
                       {cat.description}
                     </p>
                   </div>
 
-                  {/* Directional Arrow & Action: Generous whitespace & forward movement */}
-                  <div className="pt-6 mt-8 border-t border-[#E8DFD0] flex items-center justify-between">
-                    <span className="text-[11px] font-mono uppercase tracking-widest text-[#173F35] font-semibold transition-colors group-hover:text-[#C99A4B]">
-                      Explore Stories
-                    </span>
-
-                    <div className="w-8 h-8 rounded-full bg-[#EFE8DC] text-[#173F35] flex items-center justify-center transition-all duration-300 group-hover:bg-[#C99A4B] group-hover:text-white group-hover:translate-x-1.5 shadow-sm">
-                      <ArrowRight className="w-3.5 h-3.5" />
+                  {/* RIGHT: Directional Arrow & Interaction */}
+                  <div className="shrink-0 flex items-center pl-2 border-l border-[#E8DFD0]/70">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#EFE8DC] text-[#173F35] flex items-center justify-center transition-all duration-300 group-hover:bg-[#C99A4B] group-hover:text-white group-hover:translate-x-1 shadow-sm">
+                      <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300" />
                     </div>
                   </div>
                 </Link>

@@ -27,6 +27,8 @@ jobs:
           node-version: 22
       - run: npm install --no-audit --no-fund
       - run: npm run build
+        env:
+          ALLOW_EMPTY: '1'
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
